@@ -29,14 +29,14 @@ export default function Header() {
   }
 
   return (
-    <div className="h-[50px] bg-teal-100 ">
+    <div className="h-[50px] bg-teal-100 dark:bg-slate-500">
       <div className="container mx-auto flex justify-between h-full items-center">
-        <h4>Logo</h4>
+        <h4 className="dark:text-white">Logo</h4>
         <nav>
-          <ul className="menu duration-500 list-none md:static md:bg-inherit absolute  bg-white sm:text-left text-center w-full -top-full right-0 flex flex-col md:flex-row gap-x-2">
+          <ul className="menu duration-500 list-none md:static md:bg-inherit absolute  bg-white dark:bg-slate-400 sm:text-left text-center w-full -top-full right-0 flex flex-col md:flex-row gap-x-2">
             <li>
               <a
-                className="px-5 py-2 md:border-none border-b border-slate-200 hover:bg-slate-300 md:table block transition"
+                className="px-5 py-2 md:border-none dark:text-white border-b border-slate-200 hover:bg-slate-300 md:table block transition"
                 href="/"
               >
                 Home
@@ -44,7 +44,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                className="px-5 py-2 md:border-none border-b border-slate-200 hover:bg-slate-300 md:table block transition"
+                className="px-5 py-2 md:border-none dark:text-white border-b border-slate-200 hover:bg-slate-300 md:table block transition"
                 href="/"
               >
                 Blogs
@@ -52,7 +52,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                className="px-5 py-2 md:border-none border-b border-slate-200 hover:bg-slate-300 md:table block transition"
+                className="px-5 py-2 md:border-none dark:text-white border-b border-slate-200 hover:bg-slate-300 md:table block transition"
                 href="/"
               >
                 Contact us
@@ -60,7 +60,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                className="px-5 py-2  hover:bg-slate-300 md:table block transition"
+                className="px-5 py-2 dark:text-white hover:bg-slate-300 md:table block transition"
                 href="/"
               >
                 About us
@@ -69,13 +69,16 @@ export default function Header() {
           </ul>
         </nav>
         <div className="flex gap-3">
-          <button className="text-2xl" onClick={themeHandle}>
+          <button className="dark:text-white text-2xl" onClick={themeHandle}>
             {theme === "dark" ? <CiDark /> : <CiLight />}
           </button>
           <button className="bg-teal-500 hover:bg-teal-600 transition rounded-md px-4 py-1 text-white">
             Sign In
           </button>
-          <button onClick={menubar} className="barIcon md:hidden text-2xl">
+          <button
+            onClick={menubar}
+            className="dark:text-white barIcon md:hidden text-2xl"
+          >
             {toggleMenu ? <HiBars3 /> : <MdClose />}
           </button>
         </div>
