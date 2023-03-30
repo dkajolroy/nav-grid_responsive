@@ -33,7 +33,7 @@ export default function Header() {
       <div className="container mx-auto flex justify-between h-full items-center">
         <h4 className="dark:text-white">Logo</h4>
         <nav>
-          <ul className="menu duration-500 list-none md:static md:bg-inherit absolute  bg-white dark:bg-slate-400 sm:text-left text-center w-full -top-full right-0 flex flex-col md:flex-row gap-x-2">
+          <ul className="menu duration-500 list-none md:static md:bg-transparent md:dark:bg-inherit absolute  bg-white dark:bg-slate-400 sm:text-left text-center w-full -top-full right-0 flex flex-col md:flex-row gap-x-2">
             <li>
               <a
                 className="px-5 py-2 md:border-none dark:text-white border-b border-slate-200 hover:bg-slate-300 md:table block transition"
