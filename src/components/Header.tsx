@@ -69,15 +69,18 @@ export default function Header() {
           </ul>
         </nav>
         <div className="flex gap-3">
-          <button className="dark:text-white text-2xl" onClick={themeHandle}>
+          <button
+            className="dark:text-white outline-none text-2xl"
+            onClick={themeHandle}
+          >
             {theme === "dark" ? <CiDark /> : <CiLight />}
           </button>
-          <button className="bg-teal-500 hover:bg-teal-600 transition rounded-md px-4 py-1 text-white">
+          <button className="bg-teal-500 outline-none hover:bg-teal-600 transition rounded-md px-4 py-1 text-white">
             Sign In
           </button>
           <button
             onClick={menubar}
-            className="dark:text-white barIcon md:hidden text-2xl"
+            className="dark:text-white outline-none barIcon md:hidden text-2xl"
           >
             {toggleMenu ? <HiBars3 /> : <MdClose />}
           </button>
